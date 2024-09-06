@@ -7,10 +7,10 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I am Mohanna. 
-Currently I am a second-year PhD candidate in *Conversational AI* at Radboud University, where I am co-advised by Professors [Arjen P. de Vries](https://www.ru.nl/personen/vries-a-de), [Maarten de Rijke](https://staff.fnwi.uva.nl/m.derijke/), and [Faegheh Hasibi](https://hasibi.com/).
+Hi! I am Mohanna. <br>
+Currently, I am a second-year PhD candidate in *Conversational AI* at Radboud University, where I am co-advised by Professors [Arjen P. de Vries](https://www.ru.nl/personen/vries-a-de), [Maarten de Rijke](https://staff.fnwi.uva.nl/m.derijke/), and [Faegheh Hasibi](https://hasibi.com/).
 
-I am curious about various topics in language and computation :) At the moment, however, I am focused on the following research interests:
+Although I am curious about various topics in language and computation, at the moment, I am focused on the following research interests:
 1. Integrating knowledge bases with conversational systems for enhanced **grounding**.
 2. Employing neuro-symbolic solutions for **reasoning with LLMs**.
 3. Developing **adaptive conversational systems** that automatically select the best answering strategies based on user input characteristics.
