@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/2010-10-01-paper-title-number-2
 excerpt: 'Short abstract tba'
-date: 2010-10-01
+date: 2024-08-16
 venue: 'ACL 2024 (Findings)'
 # slidesurl: 'http://academicpages.github.io/files/slides2.pdf'
 # paperurl: 'http://academicpages.github.io/files/paper2.pdf'
