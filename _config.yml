@@ -24,15 +24,20 @@ author:
   avatar           : "profile.png"
   name             : "Mohanna Hoveyda"
   pronouns         : # example: "she/her"  
-  bio              : "PhD Student in Conversational AI."
-  location         : "Netherlands, Nijmegen"
-  employer         : "Radboud University"
-  uri              : # URL
+  bio              : "PhD Student in Conversational AI at Radboud University."
+  location         : "Nijmegen, The Netherlands"
+  # employer         : "Radboud University"
+  # uri              : # URL
   email            : "mohanna.hoveyda@ru.nl" 
-
   # Academic websites
   # arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  twitter          : "MohannaHoveyda"
+  linkedin         : "mohannahoveyda"
+  github           : "mohannahoveyda"
+  # goodreads        : # Username
+
+
   # impactstory      : # URL
   # orcid            : "http://orcid.org/yourorcidurl"
   # semantic         : # URL
@@ -43,7 +48,6 @@ author:
   # bitbucket        : # Username - Update with your username on the site
   # codepen          : # Username
   # dribbble         : # Username
-  github           : "mohannahoveyda"
   # kaggle           : # Username  
   # stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -52,12 +56,10 @@ author:
   # facebook         : # Username
   # flickr           : # Username
   # foursquare       : # Username
-  goodreads        : # Username
   # google_plus      : # Username
   # keybase          : # Username
   # instagram        : # Username
   # lastfm           : # Username
-  linkedin         : "mohannahoveyda"
   # mastodon         : # URL
   # medium           : # URL
   # pinterest        : # Username
@@ -65,7 +67,6 @@ author:
   # steam            : # Username
   # telegram         : # URL
   # tumblr           : # Username
-  twitter          : "MohannaHoveyda"
   # vine             : # Username
   # weibo            : # Username
   # wikipedia        : # Username
@@ -75,12 +76,12 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
+  # books:
+  #   title: 'Books'
+  # manuscripts:
+  #   title: 'Journal Articles'    
+  # conferences:
+  #   title: 'Conference Papers'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
