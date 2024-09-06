@@ -14,7 +14,7 @@ name                     : &name "Mohanna Hoveyda"
 description              : &description "personal description"
 url                      : https://mohannahoveyda.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "mohannahoveyda/mohannahoveyda.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -24,17 +24,18 @@ author:
   avatar           : "IMG_3097.jpg"
   name             : "Mohanna Hoveyda"
   pronouns         : # example: "she/her"  
-  bio              : "PhD Student in Conversational AI at Radboud University."
+  bio              : "PhD Student in Conversational AI at Radboud University.<br> Email: mohanna.hoveyda@ru.nl"
   location         : "Nijmegen, The Netherlands"
-  # employer         : "Radboud University"
-  # uri              : # URL
-  email            : "mohanna.hoveyda@ru.nl" 
-  # Academic websites
-  # arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?user=aKPQO-cAAAAJ&hl=en&oi=ao"
   twitter          : "MohannaHoveyda"
   linkedin         : "mohannahoveyda"
   github           : "mohannahoveyda"
+  # employer         : "Radboud University"
+  # uri              : # URL
+  # email            : "mohanna.hoveyda@ru.nl" 
+  # Academic websites
+  # arxiv            : # URL - Update with the correct link to your profile
+
   # goodreads        : # Username
 
 
