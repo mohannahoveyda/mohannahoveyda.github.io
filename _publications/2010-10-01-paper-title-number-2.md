@@ -7,7 +7,7 @@ excerpt: 'Short abstract tba'
 date: 2024-08-16
 venue: 'ACL 2024 (Findings)'
 # slidesurl: 'http://academicpages.github.io/files/slides2.pdf'
-# paperurl: 'http://academicpages.github.io/files/paper2.pdf'
+paperurl: 'https://aclanthology.org/2024.findings-acl.829.pdf'
 citation: 'Mohanna Hoveyda, Arjen Vries, Faegheh Hasibi, and Maarten Rijke. Published In Findings of the Association for Computational Linguistics (ACL), 2024.'
 ---
 
