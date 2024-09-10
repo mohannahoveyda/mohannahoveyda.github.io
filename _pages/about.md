@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Mohanna Hoveyda"
+title: ""
 author_profile: true
 redirect_from: 
   - /about/
@@ -8,10 +8,10 @@ redirect_from:
 ---
 
 Hi! I am Mohanna. <br>
-Currently, I am a second-year PhD candidate in *Conversational AI* at Radboud University, where I am co-advised by Professors [Arjen P. de Vries](https://www.ru.nl/personen/vries-a-de), [Maarten de Rijke](https://staff.fnwi.uva.nl/m.derijke/), and [Faegheh Hasibi](https://hasibi.com/).
+Currently a second-year PhD candidate in *Conversational AI* at Radboud University, where I am co-advised by Professors [Arjen P. de Vries](https://www.ru.nl/personen/vries-a-de), [Maarten de Rijke](https://staff.fnwi.uva.nl/m.derijke/), and [Faegheh Hasibi](https://hasibi.com/).
 
-Although I am curious about various topics in language and computation, at the moment, I am focused on the following research interests:
-1. Integrating knowledge bases with conversational systems for enhanced **grounding**.
+Despite being curious about various topics in language and computation, at the moment, my research is centered on:
+1. **Grounding** conversational systems using knowledge bases.
 2. Employing neuro-symbolic solutions for **reasoning with LLMs**.
 3. Developing **adaptive conversational systems** that automatically select the best answering strategies based on user input characteristics.
 
