@@ -18,7 +18,7 @@ Despite being curious about various topics in language and computation, at the m
 
 With this multifaceted approach, we aim to enhance the robustness and adaptability of conversational systems.
 
-For more details about my background, please check out my full CV [here](http://mohannahoveyda.github.io/files/CV_06_Sep_2024.pdf).
+For more details about my background, please check out my full CV [here](http://mohannahoveyda.github.io/files/Mohanna_CV.pdf).
 
 <!-- 
 A data-driven personal website
