@@ -3,7 +3,7 @@ title: "Network Science-Based Structural Analysis of Semantic Representations"
 collection: publications
 category: manuscripts
 permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This study aims to classify semantic representations based on the structural characteristics of their graph structures. To this end, we studied the structural differences between various semantic representations such as contextualized, sensory-grounded, knowledge-enriched, and human-based semantic representations. Since classifying the semantic representations based on their graph structures may be confounded by the graph sizes, we introduced a novel statistical approach that enables clustering of semantic representations while considering the effect of graph size in the comparisons.'
+excerpt: 'Developed a statistical framework with configuration models and hypothesis testing for size-invariant comparison and clustering of non-isomorphic networks, and applied graph-theoretic metrics to analyze semantic representations across machine-learned (Word2Vec, BERT, VisWord2Vec), human-curated (WordNet, ConceptNet), and hybrid (ConceptNet Numberbatch) spaces.'
 date: 2023-12-31
 # venue: 'Journal 1'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
