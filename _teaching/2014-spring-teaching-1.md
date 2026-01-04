@@ -1,5 +1,5 @@
 ---
-title: "Machine Learning for Natural Language Processing Teaching Assisstant"
+title: "Machine Learning for Natural Language Processing"
 collection: teaching
 type: "Master's course"
 permalink: /teaching/2014-spring-teaching-1

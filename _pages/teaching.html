@@ -1,12 +1,29 @@
 ---
 layout: archive
-title: "Teaching"
+title: "Teaching and Supervision"
 permalink: /teaching/
 author_profile: true
+hide_title: true
 ---
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+<!-- <h2>Supervision</h2>
+<hr />
+
+{% assign supervision_posts = site.teaching | where: "category", "supervision" %}
+{% if supervision_posts.size > 0 %}
+  {% for post in supervision_posts reversed %}
+    {% include archive-single-teaching.html %}
+  {% endfor %}
+{% else %}
+  <p class="teaching-empty">Coming soon...</p>
+{% endif %} -->
+
+<h2>Teaching Assistance</h2>
+<hr />
+
+{% assign teaching_posts = site.teaching | where_exp: "post", "post.category != 'supervision'" %}
+{% for post in teaching_posts reversed %}
+  {% include archive-single-teaching.html %}
 {% endfor %}

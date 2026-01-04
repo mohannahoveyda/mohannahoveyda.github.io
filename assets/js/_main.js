@@ -96,4 +96,11 @@ $(document).ready(function(){
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
 
+  // Publication accordion toggle
+  $(".publication-header").on("click", function(e) {
+    e.preventDefault();
+    var $publicationItem = $(this).closest('.publication-item');
+    $publicationItem.toggleClass('active');
+  });
+
 });

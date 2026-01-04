@@ -5,10 +5,17 @@ category: manuscripts
 permalink: /publication/2010-10-01-paper-title-number-2
 excerpt: 'Entity linking (EL) in conversations faces notable challenges in practical applications, primarily due to the scarcity of entity-annotated conversational datasets and sparse knowledge bases (KB) containing domain-specific, long-tail entities. Our findings reveal that previous evaluation approaches fall short of capturing real-world complexities for zero-shot EL, highlighting the necessity for new approaches to design and assess conversational EL models to adapt to limited resources. The evaluation setup and the dataset proposed in this research are made publicly available.'
 date: 2024-08-16
-venue: 'ACL 2024 (Findings)'
+venue: 'ACL'
 slidesurl: 'http://mohannahoveyda.github.io/files/Final_Sildes_ACL_2024.pdf'
 paperurl: 'https://aclanthology.org/2024.findings-acl.829.pdf'
 citation: 'Mohanna Hoveyda, Arjen Vries, Faegheh Hasibi, and Maarten Rijke. Published In Findings of the Association for Computational Linguistics (ACL), 2024.'
+tags:
+  - 'Entity linking'
+  - 'Conversational AI'
+  - 'Zero-shot learning'
+  - 'Knowledge bases'
+  - 'Evaluation'
+  - 'Long-tail entities'
 ---
 
 Entity linking (EL) in conversations faces notable challenges in practical applications, primarily due to the scarcity of entity-annotated conversational datasets and sparse knowledge bases (KB) containing domain-specific, long-tail entities. 

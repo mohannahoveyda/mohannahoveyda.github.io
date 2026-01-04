@@ -1,0 +1,41 @@
+{% include base_path %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="teaching-item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="teaching-title" itemprop="headline">
+      {{ title }}
+    </h2>
+    
+    <div class="teaching-meta">
+      {% if post.type %}
+        <span class="teaching-type">{{ post.type }}</span>
+        {% if post.venue or post.date or post.location %}<span class="teaching-separator"> • </span>{% endif %}
+      {% endif %}
+      
+      {% if post.venue %}
+        <span class="teaching-venue"><i>{{ post.venue }}</i></span>
+        {% if post.date or post.location %}<span class="teaching-separator"> • </span>{% endif %}
+      {% endif %}
+      
+      {% if post.date %}
+        <span class="teaching-date">
+          {{ post.date | date: "%Y" }}{% if post.ongoing %} - present{% endif %}
+        </span>
+        {% if post.location %}<span class="teaching-separator"> • </span>{% endif %}
+      {% endif %}
+      
+      {% if post.location %}
+        <span class="teaching-location">{{ post.location }}</span>
+      {% endif %}
+    </div>
+    
+  </article>
+</div>
+

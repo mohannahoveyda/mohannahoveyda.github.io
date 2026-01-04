@@ -5,10 +5,16 @@ category: manuscripts
 permalink: /publication/2009-10-01-paper-title-number-1
 excerpt: 'Developed a statistical framework with configuration models and hypothesis testing for size-invariant comparison and clustering of non-isomorphic networks, and applied graph-theoretic metrics to analyze semantic representations across machine-learned (Word2Vec, BERT, VisWord2Vec), human-curated (WordNet, ConceptNet), and hybrid (ConceptNet Numberbatch) spaces.'
 date: 2023-12-31
-# venue: 'Journal 1'
+venue: "Master's Thesis"
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'https://mohannahoveyda.github.io/files/ThesisText_Mohannahoveyda.pdf'
 citation: 'Mohanna Hoveyda, Paulino Villas Boas, Mahmood Bijankhan, Mostafa Salehi.'
+tags:
+  - 'Semantic representations'
+  - 'NLP'
+  - 'Non-isomorphic graph comparison'
+  - 'Complex networks analysis'
+  - 'Configuration model'
 ---
 
 Semantic representations are essential to natural language processing since they enable language models to process the meaning of words and phrases. While both language models and human-generated semantic graphs have been shown to be effective in various natural language processing tasks, the underlying representations that drive their performance are not well understood. This study aims to profile and classify semantic representations based on the structural characteristics of their graph structures. To this end, we studied the structural differences between various semantic representations such as contextualized, sensory-grounded, knowledge-enriched, and human-based semantic representations. Our analysis includes both mesoscale and global scale of studying graph structures. Since classifying the semantic representations based on their graph structures may be confounded by the graph sizes, we introduced a novel statistical approach that improved the clustering of semantic representations while considering the effect of graph size in the comparisons. Using this framework, we found that in human-based semantic graphs, most central nodes are the most frequent words in English, while this is not the case for representations built from distributional semantic models. Moreover, comparing base representations to their combined counterparts we found that adding extra knowledge to a base representation can result in various structural changes. For instance, adding visual semantic knowledge to a distributional space can decrease the probability of forming semantic groups, however, adding human-based knowledge can increase this probability. Finally, we observed that applying the suggested statistical comparison framework yields better clustering for different-sized semantic graphs. To the best of our knowledge, this is the first study aimed to compare semantic representations in such a comprehensive manner in which we included 7 different models of semantic representations. Our findings can have multiple implications for developing more effective and interpretable models in natural language processing (NLP) and for understanding how to combine the strengths of different representations to improve performance on a wide range of NLP tasks. Moreover, the statistical method we introduced in this study in order to compare different semantic graphs that are varying in their size is a pioneering effort that can be used as a general method of comparison in network science. In this regard, some suggestions have been made on how the findings of this work can contribute to future studies.
