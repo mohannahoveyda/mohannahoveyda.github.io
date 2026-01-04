@@ -7,8 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I am Mohanna. 
-(Think Moana the cartoon, and you’re close.) <br>
+Hi, I am Mohanna.  <br>
 
 I am a third-year PhD candidate in *Conversational AI* at Radboud University, where I am lucky to be co-advised by [Arjen P. de Vries](https://www.ru.nl/personen/vries-a-de), [Maarten de Rijke](https://staff.fnwi.uva.nl/m.derijke/), and [Faegheh Hasibi](https://hasibi.com/).
 
