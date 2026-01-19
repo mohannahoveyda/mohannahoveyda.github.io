@@ -96,11 +96,14 @@ $(document).ready(function(){
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
 
-  // Publication accordion toggle
-  $(".publication-header").on("click", function(e) {
+  // Publication accordion toggle - use event delegation for reliability
+  $(document).on("click", ".publication-header", function(e) {
     e.preventDefault();
+    e.stopPropagation();
     var $publicationItem = $(this).closest('.publication-item');
-    $publicationItem.toggleClass('active');
+    if ($publicationItem.length) {
+      $publicationItem.toggleClass('active');
+    }
   });
 
 });

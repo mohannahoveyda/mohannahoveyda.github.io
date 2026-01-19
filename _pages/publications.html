@@ -34,46 +34,48 @@ hide_title: true
 {% endif %}
 
 <script>
-// Publication accordion toggle - ensure it works on live site
-// This script waits for jQuery to load from main.min.js
+// Publication accordion toggle - works immediately without rebuilding main.min.js
+// Uses event delegation so it works even if elements are added dynamically
 (function() {
-  var attempts = 0;
-  var maxAttempts = 50; // Wait up to 5 seconds (50 * 100ms)
+  // Vanilla JS version - works immediately
+  document.addEventListener('click', function(e) {
+    var header = e.target.closest('.publication-header');
+    if (header) {
+      e.preventDefault();
+      e.stopPropagation();
+      var publicationItem = header.closest('.publication-item');
+      if (publicationItem) {
+        publicationItem.classList.toggle('active');
+      }
+    }
+  });
   
-  function initToggle() {
+  // jQuery version - for compatibility and to override any existing handlers
+  function initJQueryToggle() {
     if (typeof window.jQuery !== 'undefined' && window.jQuery) {
       window.jQuery(document).ready(function($) {
-        $(".publication-header").off('click.publication-toggle').on("click.publication-toggle", function(e) {
+        // Use event delegation and namespace to avoid conflicts
+        $(document).off('click.publication-toggle', '.publication-header')
+                   .on('click.publication-toggle', '.publication-header', function(e) {
           e.preventDefault();
-          var $publicationItem = $(this).closest('.publication-item');
-          $publicationItem.toggleClass('active');
+          e.stopPropagation();
+          var $item = $(this).closest('.publication-item');
+          if ($item.length) {
+            $item.toggleClass('active');
+          }
         });
       });
-    } else if (attempts < maxAttempts) {
-      attempts++;
-      setTimeout(initToggle, 100);
     } else {
-      // Fallback: use vanilla JavaScript if jQuery never loads
-      document.addEventListener('DOMContentLoaded', function() {
-        var headers = document.querySelectorAll('.publication-header');
-        headers.forEach(function(header) {
-          header.addEventListener('click', function(e) {
-            e.preventDefault();
-            var publicationItem = this.closest('.publication-item');
-            if (publicationItem) {
-              publicationItem.classList.toggle('active');
-            }
-          });
-        });
-      });
+      // Wait for jQuery to load (from main.min.js)
+      setTimeout(initJQueryToggle, 100);
     }
   }
   
-  // Start initialization
+  // Start jQuery initialization
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initToggle);
+    document.addEventListener('DOMContentLoaded', initJQueryToggle);
   } else {
-    initToggle();
+    initJQueryToggle();
   }
 })();
 </script>
