@@ -5,8 +5,8 @@ category: manuscripts
 permalink: /publication/2015-10-01-paper-title-number-3
 date: 2025-07-13
 venue: 'SIGIR'
-# slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-# paperurl: 'http://academicpages.github.io/files/paper1.pdf'
+paperurl: 'https://dl.acm.org/doi/pdf/10.1145/3726302.3730351'
+slidesurl: 'http://mohannahoveyda.github.io/files/SIGIR_2025.pdf'
 citation: 'Mohanna Hoveyda, Harrie Oosterhuis, Arjen P. de Vries, Faegheh Hasibi, Maarten de Rijke'
 tags:
   - 'Modular information access systems'

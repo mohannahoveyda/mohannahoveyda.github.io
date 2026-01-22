@@ -5,6 +5,7 @@ category: manuscripts
 permalink: /publication/2026-03-01-orlog-resolving-complex-queries
 date: 2026-03-03
 venue: 'ECIR'
+paperurl: 'https://mohannahoveyda.github.io/files/ECIR_2026_Full_paper__OrLog.pdf'
 citation: 'Mohanna Hoveyda, Jelle Piepenbrock, Arjen P. de Vries, Maarten de Rijke, Faegheh Hasibi'
 tags:
   - 'Probabilistic reasoning'
