@@ -250,18 +250,11 @@
 
 .publication-item {
   margin-bottom: 2em;
-  border-bottom: 1px solid $border-color;
   padding-bottom: 1.5em;
-  transition: border-color 0.2s ease;
 
   &:last-child {
-    border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
-  }
-
-  &:hover {
-    border-color: mix($border-color, $primary-color, 80%);
   }
 }
 
@@ -315,6 +308,33 @@
     min-width: 0;
     font-weight: 500;
     word-wrap: break-word;
+  }
+
+  .publication-link-indicators {
+    display: inline-flex;
+    gap: 0.4em;
+    margin-left: 0.5em;
+    align-items: baseline;
+    flex-shrink: 0;
+  }
+
+  .publication-link-indicator {
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: 500;
+    color: $primary-color;
+    text-decoration: none;
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    
+    &:hover {
+      color: darken($primary-color, 10%);
+      background-color: rgba($primary-color, 0.1);
+      text-decoration: none;
+    }
   }
 
   .publication-toggle-icon {
@@ -372,18 +392,18 @@
   font-size: 0.75em;
   font-weight: 500;
   line-height: 1.4;
-  color: #1a365d;
-  background-color: #e6f0ff;
-  border: 1px solid #b3d9ff;
+  color: mix(#fff, $gray, 25%);
+  background-color: transparent;
+  border: 1px solid mix(#fff, $gray, 60%);
   border-radius: 12px;
   white-space: nowrap;
   transition: all 0.2s ease;
   letter-spacing: 0.01em;
 
   &:hover {
-    background-color: #cce5ff;
-    border-color: #80bfff;
-    color: #0d1f3d;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-color: mix(#fff, $gray, 50%);
+    color: mix(#fff, $gray, 15%);
     transform: translateY(-1px);
   }
 }

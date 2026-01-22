@@ -29,6 +29,21 @@
             <span class="publication-title-separator"> - </span>
           {% endif %}
           <span class="publication-title-text">{{ title }}</span>
+          {% comment %} Paper and Slide indicators {% endcomment %}
+          {% if post.paperurl or post.slidesurl %}
+            <span class="publication-link-indicators">
+              {% if post.paperurl %}
+                <a href="{{ post.paperurl }}" class="publication-link-indicator" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
+                  [paper]
+                </a>
+              {% endif %}
+              {% if post.slidesurl %}
+                <a href="{{ post.slidesurl }}" class="publication-link-indicator" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">
+                  [slide]
+                </a>
+              {% endif %}
+            </span>
+          {% endif %}
           <span class="publication-toggle-icon">
             <i class="fa fa-chevron-down" aria-hidden="true"></i>
           </span>
@@ -98,21 +113,6 @@
           {% endif %}
         {% endif %}
         
-        {% comment %} Links section {% endcomment %}
-        {% if post.paperurl or post.slidesurl %}
-          <div class="publication-links">
-            {% if post.paperurl %}
-              <a href="{{ post.paperurl }}" class="publication-link" target="_blank" rel="noopener noreferrer">
-                <i class="fa fa-file-pdf" aria-hidden="true"></i> Paper
-              </a>
-            {% endif %}
-            {% if post.slidesurl %}
-              <a href="{{ post.slidesurl }}" class="publication-link" target="_blank" rel="noopener noreferrer">
-                <i class="fa fa-file-powerpoint-o" aria-hidden="true"></i> Slides
-              </a>
-            {% endif %}
-          </div>
-        {% endif %}
         
       </div>
     </div>
