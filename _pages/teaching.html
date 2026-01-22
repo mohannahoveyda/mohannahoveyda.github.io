@@ -8,22 +8,165 @@ hide_title: true
 
 {% include base_path %}
 
-<!-- <h2>Supervision</h2>
-<hr />
+<div class="teaching-section">
+  <h2>Supervision</h2>
+  <hr />
 
-{% assign supervision_posts = site.teaching | where: "category", "supervision" %}
-{% if supervision_posts.size > 0 %}
-  {% for post in supervision_posts reversed %}
-    {% include archive-single-teaching.html %}
-  {% endfor %}
-{% else %}
-  <p class="teaching-empty">Coming soon...</p>
-{% endif %} -->
+  <div class="supervision-list">
+    <div class="supervision-item">
+      <div class="supervision-header">
+        <span class="supervision-name"><em>Tsvetomira Krikoryan</em></span>
+        <span class="supervision-details">(MSc internship, Completed, Wintertuin Company)</span>
+      </div>
+      <div class="supervision-topic">Training a GPT-2 model on Papiamentu for creative task assistance</div>
+    </div>
 
-<h2>Teaching Assistance</h2>
-<hr />
+    <div class="supervision-item">
+      <div class="supervision-header">
+        <span class="supervision-name"><em>Luuk van den Hurk</em></span>
+        <span class="supervision-details">(MSc thesis, September 2025, KPN Company)</span>
+      </div>
+      <div class="supervision-topic">Enhancing Knowledge Representation for more effective RAG</div>
+    </div>
 
-{% assign teaching_posts = site.teaching | where_exp: "post", "post.category != 'supervision'" %}
-{% for post in teaching_posts reversed %}
-  {% include archive-single-teaching.html %}
-{% endfor %}
+    <div class="supervision-item">
+      <div class="supervision-header">
+        <span class="supervision-name"><em>Mario Tsatsev</em></span>
+        <span class="supervision-details">(MSc thesis, September 2025, Radboud University)</span>
+      </div>
+      <div class="supervision-topic">Enhanced prior probability estimation for neuro-symbolic reasoning in complex IR</div>
+    </div>
+
+    <div class="supervision-item">
+      <div class="supervision-header">
+        <span class="supervision-name"><em>Federico Signorelli</em></span>
+        <span class="supervision-details">(MSc internship, January 2026, University of Amsterdam &amp; KPN)</span>
+      </div>
+      <div class="supervision-topic">Adaptive orchestration of agents and tools for more effective RAG</div>
+    </div>
+  </div>
+</div>
+
+<div class="teaching-section">
+  <h2>Teaching Assistance</h2>
+  <hr />
+
+  <div class="teaching-list">
+    <div class="teaching-item">
+      <div class="teaching-header">
+        <span class="teaching-course">Information Retrieval</span>
+      </div>
+      <div class="teaching-details">Master's course • Radboud University, iCIS • 2023 - present • Nijmegen, Netherlands</div>
+    </div>
+
+    <div class="teaching-item">
+      <div class="teaching-header">
+        <span class="teaching-course">Machine Learning for Natural Language Processing</span>
+      </div>
+      <div class="teaching-details">Master's course • University of Tehran, Faculty of New Sciences and Technologies • 2022 • Tehran, Iran</div>
+    </div>
+  </div>
+</div>
+
+<style>
+.teaching-section {
+  margin-bottom: 3em;
+}
+
+.teaching-section:last-child {
+  margin-bottom: 0;
+}
+
+.supervision-list {
+  margin-top: 1.5em;
+}
+
+.supervision-item {
+  margin-bottom: 1em;
+}
+
+.supervision-item:last-child {
+  margin-bottom: 0;
+}
+
+.supervision-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4em;
+  margin-bottom: 0.3em;
+  line-height: 1.4;
+}
+
+.supervision-name {
+  font-size: 0.95em;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.supervision-name em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.supervision-details {
+  font-size: 0.85em;
+  color: #666;
+  line-height: 1.4;
+}
+
+.supervision-topic {
+  font-size: 0.9em;
+  color: #333;
+  line-height: 1.5;
+  margin-top: 0.2em;
+}
+
+.teaching-list {
+  margin-top: 1.5em;
+}
+
+.teaching-item {
+  margin-bottom: 1em;
+  border: none;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.teaching-item:last-child {
+  margin-bottom: 0;
+}
+
+.teaching-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  line-height: 1.4;
+  margin-bottom: 0.3em;
+}
+
+.teaching-course {
+  font-size: 0.95em;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.teaching-details {
+  font-size: 0.9em;
+  color: #333;
+  line-height: 1.5;
+  margin-top: 0.2em;
+}
+
+@media (max-width: 768px) {
+  .supervision-header {
+    flex-direction: column;
+    gap: 0.2em;
+  }
+  
+  .supervision-item,
+  .teaching-item {
+    margin-bottom: 0.9em;
+  }
+}
+</style>
