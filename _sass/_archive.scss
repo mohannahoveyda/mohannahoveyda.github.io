@@ -322,7 +322,7 @@
     display: inline-block;
     font-size: 0.7em;
     font-weight: 500;
-    color: $primary-color;
+    color: #007bff;
     text-decoration: none;
     padding: 0.15em 0.4em;
     border-radius: 3px;
@@ -331,8 +331,8 @@
     line-height: 1.2;
     
     &:hover {
-      color: darken($primary-color, 10%);
-      background-color: rgba($primary-color, 0.1);
+      color: #0056b3;
+      background-color: rgba(0, 123, 255, 0.1);
       text-decoration: none;
     }
   }
