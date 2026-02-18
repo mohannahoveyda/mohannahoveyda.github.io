@@ -4,28 +4,42 @@ layout: compress
 
 {% include base_path %}
 
+{% if site.site_theme == "minimal" %}
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js theme-minimal" data-theme="dark">
+  <head>
+    {% include head-minimal.html %}
+    {% include head/custom.html %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    {% include minimal-masthead.html %}
+    <main class="minimal-main">{{ content }}</main>
+    {% include minimal-footer.html %}
+    {% include scripts.html %}
+    <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
+  </body>
+</html>
+{% else %}
 <!doctype html>
 <html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
   </head>
-
   <body>
-
     {% include browser-upgrade.html %}
     {% include masthead.html %}
-
     {{ content }}
-
     <div class="page__footer">
       <footer>
         {% include footer/custom.html %}
         {% include footer.html %}
       </footer>
     </div>
-
     {% include scripts.html %}
-
   </body>
 </html>
+{% endif %}

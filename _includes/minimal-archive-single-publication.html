@@ -1,0 +1,53 @@
+{% include base_path %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+{% assign authors = post.citation | split: 'Published In' | first | strip %}
+
+<div class="minimal-pub-item">
+  <p class="minimal-pub-title">
+    {% if post.paperurl %}
+      <a href="{{ post.paperurl }}" target="_blank" rel="noopener noreferrer">{{ title }}</a>
+    {% else %}
+      {{ title }}
+    {% endif %}
+    {% if post.venue %}
+  {% assign venue_lower = post.venue | downcase %}
+  {% if venue_lower contains "thesis" %}
+    {% assign venue_formatted = post.venue %}
+  {% else %}
+    {% assign venue_main = post.venue | split: " " | first %}
+    {% if post.date %}
+      {% capture year_short %}{{ post.date | date: "%y" }}{% endcapture %}
+      {% assign venue_with_year = venue_main | append: "'" | append: year_short %}
+      {% assign venue_formatted = post.venue | replace_first: venue_main, venue_with_year %}
+    {% else %}
+      {% assign venue_formatted = post.venue %}
+    {% endif %}
+  {% endif %}
+  <span class="minimal-pub-venue-inline"> ({{ venue_formatted }})</span>
+{% endif %}
+  </p>
+  {% if authors != '' %}
+  <p class="minimal-pub-authors">{{ authors }}</p>
+  {% endif %}
+  {% if post.paperurl or post.slidesurl %}
+  <p class="minimal-pub-meta">
+    <span class="minimal-pub-links">
+      {% if post.paperurl %}
+        {% if venue_lower contains "thesis" %}
+          <a href="{{ post.paperurl }}" target="_blank" rel="noopener noreferrer">[master's thesis]</a>
+        {% else %}
+          <a href="{{ post.paperurl }}" target="_blank" rel="noopener noreferrer">[paper]</a>
+        {% endif %}
+      {% endif %}
+      {% if post.paperurl and post.slidesurl %} · {% endif %}
+      {% if post.slidesurl %}<a href="{{ post.slidesurl }}" target="_blank" rel="noopener noreferrer">[slides]</a>{% endif %}
+    </span>
+  </p>
+  {% endif %}
+</div>

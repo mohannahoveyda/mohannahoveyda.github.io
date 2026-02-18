@@ -2,6 +2,45 @@
 layout: default
 ---
 
+{% if site.site_theme == "minimal" %}
+<div class="minimal-archive">
+  <h1 class="minimal-page__title">{{ page.title }}</h1>
+  {% if page.url contains 'publications' %}
+    {% if site.author.googlescholar %}
+    <p class="minimal-thoughts-intro">My publications can also be found on <a href="{{ site.author.googlescholar }}">Google Scholar</a>.</p>
+    {% endif %}
+    {% if site.publication_category %}
+      {% for category in site.publication_category %}
+        {% assign title_shown = false %}
+        {% for post in site.publications reversed %}
+          {% if post.category != category[0] %}{% continue %}{% endif %}
+          {% unless title_shown %}
+          <h2 class="minimal-pub-year">{{ category[1].title }}</h2>
+          {% assign title_shown = true %}
+          {% endunless %}
+          {% include minimal-archive-single-publication.html %}
+        {% endfor %}
+      {% endfor %}
+    {% else %}
+      {% assign pubs_by_year = site.publications | group_by_exp: "item", "item.date | date: '%Y'" | sort: "name" | reverse %}
+      {% for year_group in pubs_by_year %}
+      <h2 class="minimal-pub-year">{{ year_group.name }}</h2>
+      {% for post in year_group.items %}
+        {% include minimal-archive-single-publication.html %}
+      {% endfor %}
+      {% endfor %}
+    {% endif %}
+  {% elsif page.url contains 'cv' %}
+    <a href="{{ '/files/Mohanna_CV.pdf' | relative_url }}" class="minimal-cv__download" download>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      Download CV
+    </a>
+    <iframe src="{{ '/files/Mohanna_CV.pdf' | relative_url }}#toolbar=1" class="minimal-cv__embed" title="CV"></iframe>
+  {% else %}
+    {{ content }}
+  {% endif %}
+</div>
+{% else %}
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
 {% endif %}
@@ -22,3 +61,4 @@ layout: default
     {{ content }}
   </div>
 </div>
+{% endif %}

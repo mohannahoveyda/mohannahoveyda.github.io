@@ -7,6 +7,8 @@
 # server process.
 
 # Basic Site Settings
+# Set to "minimal" for maiklarooij.nl-style dark theme, "academic" for original
+site_theme               : "minimal"
 locale                   : "en-US"
 title                    : "Mohanna Hoveyda"
 title_separator          : "-"

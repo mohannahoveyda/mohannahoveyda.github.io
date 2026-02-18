@@ -12,7 +12,10 @@ main:
   #   url: /talks/    
 
   - title: "Teaching & Supervision"
-    url: /teaching/    
+    url: /teaching/
+
+  # - title: "Thoughts"
+  #   url: /thoughts/
     
   # - title: "Portfolio"
   #   url: /portfolio/
@@ -20,8 +23,8 @@ main:
   # - title: "Blog Posts"
   #   url: /year-archive/
     
-  # - title: "CV"
-  #   url: /cv/
+  - title: "CV"
+    url: /cv/
     
   # - title: "Guide"
   #   url: /markdown/
