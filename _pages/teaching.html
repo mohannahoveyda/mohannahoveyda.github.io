@@ -169,4 +169,19 @@ hide_title: true
     margin-bottom: 0.9em;
   }
 }
+
+/* Dark mode: ensure supervision and teaching text remains visible */
+@media (prefers-color-scheme: dark) {
+  .supervision-name,
+  .teaching-course {
+    color: #e4e4e4;
+  }
+  .supervision-details,
+  .teaching-details {
+    color: #b0b0b0;
+  }
+  .supervision-topic {
+    color: #d0d0d0;
+  }
+}
 </style>
