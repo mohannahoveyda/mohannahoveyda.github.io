@@ -1,0 +1,499 @@
+/* Minimal theme - maiklarooij.nl inspired */
+
+:root {
+  --minimal-bg: #000000;
+  --minimal-text: #e6e6e6;
+  --minimal-text-muted: #999;
+  --minimal-border: rgba(255, 255, 255, 0.15);
+  --minimal-link: #e6e6e6;
+  --minimal-link-hover: #fff;
+  --minimal-card-bg: #1a1a1a;
+}
+
+[data-theme="light"] {
+  --minimal-bg: #ffffff;
+  --minimal-text: #1a1a1a;
+  --minimal-text-muted: #666;
+  --minimal-border: rgba(0, 0, 0, 0.1);
+  --minimal-link: #1a1a1a;
+  --minimal-link-hover: #000;
+  --minimal-card-bg: #f5f5f5;
+}
+
+/* Reset & base */
+.theme-minimal *,
+.theme-minimal *::before,
+.theme-minimal *::after {
+  box-sizing: border-box;
+}
+
+.theme-minimal {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--minimal-text);
+  background-color: var(--minimal-bg);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.theme-minimal a {
+  color: var(--minimal-link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.theme-minimal a:hover {
+  color: var(--minimal-link-hover);
+  text-decoration: underline;
+}
+
+/* Navigation */
+.minimal-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--minimal-bg);
+  border-bottom: 1px solid var(--minimal-border);
+  padding: 1rem 2rem;
+}
+
+.minimal-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.minimal-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.minimal-nav__logo:hover {
+  text-decoration: none;
+}
+
+.minimal-nav__icon {
+  flex-shrink: 0;
+}
+
+.minimal-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.minimal-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.minimal-nav__link:hover {
+  text-decoration: none;
+  background: var(--minimal-card-bg);
+}
+
+.minimal-nav__link.active {
+  font-weight: 600;
+}
+
+.minimal-nav__theme-toggle {
+  background: transparent;
+  border: 1px solid var(--minimal-border);
+  border-radius: 6px;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: var(--minimal-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.minimal-nav__theme-toggle:hover {
+  background: var(--minimal-card-bg);
+}
+
+.theme-icon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-icon--moon,
+[data-theme="light"] .theme-icon--sun {
+  display: block;
+}
+
+/* Main content */
+.minimal-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 2rem 4rem;
+  min-height: 100vh;
+}
+
+/* Homepage */
+.minimal-home {
+  padding-top: 2rem;
+}
+
+.minimal-home__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.minimal-home__avatar--top {
+  order: -1;
+}
+
+.minimal-home__title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 1.5rem;
+}
+
+.minimal-home__intro {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.minimal-home__intro p {
+  margin: 0 0 1rem;
+}
+
+.minimal-home__social {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.minimal-social__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--minimal-border);
+  border-radius: 8px;
+  color: var(--minimal-text);
+  transition: background 0.2s ease;
+}
+
+.minimal-social__btn:hover {
+  background: var(--minimal-card-bg);
+  text-decoration: none;
+}
+
+.minimal-home__avatar {
+  flex-shrink: 0;
+}
+
+.minimal-home__avatar-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Page titles */
+.minimal-page__title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 2rem;
+}
+
+/* Archive / Publications */
+.minimal-archive {
+  padding-top: 1rem;
+}
+
+.minimal-archive .minimal-pub-year {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1rem;
+}
+
+.minimal-archive .minimal-pub-year:first-child {
+  margin-top: 0;
+}
+
+.minimal-pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Publications - structured list style */
+.minimal-archive .minimal-pub-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--minimal-border);
+}
+
+.minimal-archive .minimal-pub-item:last-child {
+  border-bottom: none;
+}
+
+.minimal-archive .minimal-pub-title {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--minimal-text);
+}
+
+.minimal-archive .minimal-pub-title a:hover {
+  text-decoration: underline;
+}
+
+.minimal-archive .minimal-pub-venue-inline {
+  font-size: 0.85em;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--minimal-text-muted);
+}
+
+.minimal-archive .minimal-pub-authors {
+  margin: 0 0 0.25rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--minimal-text-muted);
+}
+
+.minimal-archive .minimal-pub-meta {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--minimal-text-muted);
+  line-height: 1.5;
+}
+
+.minimal-archive .minimal-pub-links a {
+  color: var(--minimal-link);
+}
+
+.minimal-archive .minimal-pub-links a:hover {
+  text-decoration: underline;
+}
+
+/* Thoughts (blog) */
+.minimal-thoughts-intro {
+  margin-bottom: 2rem;
+  color: var(--minimal-text-muted);
+}
+
+.minimal-thoughts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.minimal-thought-card {
+  border: 1px solid var(--minimal-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--minimal-card-bg);
+  transition: border-color 0.2s ease;
+}
+
+.minimal-thought-card:hover {
+  border-color: var(--minimal-text-muted);
+}
+
+.minimal-thought-card a {
+  display: block;
+  text-decoration: none;
+}
+
+.minimal-thought-card a:hover {
+  text-decoration: none;
+}
+
+.minimal-thought-card__image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  background: var(--minimal-border);
+}
+
+.minimal-thought-card__body {
+  padding: 1rem;
+}
+
+.minimal-thought-card__meta {
+  font-size: 0.8rem;
+  color: var(--minimal-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.minimal-thought-card__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--minimal-text);
+}
+
+.minimal-thought-card__excerpt {
+  font-size: 0.9rem;
+  color: var(--minimal-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* CV page */
+.minimal-cv {
+  padding-top: 1rem;
+}
+
+.minimal-cv__download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Force high-contrast button colors (override link styles) */
+.theme-minimal .minimal-cv__download {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+.theme-minimal .minimal-cv__download:hover {
+  background: #f0f0f0 !important;
+  color: #000000 !important;
+  opacity: 1;
+  text-decoration: none !important;
+}
+
+/* Light theme: invert for contrast */
+.theme-minimal[data-theme="light"] .minimal-cv__download {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+.theme-minimal[data-theme="light"] .minimal-cv__download:hover {
+  background: #333333 !important;
+  color: #ffffff !important;
+}
+
+.minimal-cv__download:hover {
+  transform: translateY(-1px);
+}
+
+.minimal-cv__embed {
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  border: 1px solid var(--minimal-border);
+  border-radius: 8px;
+}
+
+/* Single page */
+.minimal-single {
+  padding-top: 1rem;
+}
+
+.minimal-single__content {
+  line-height: 1.7;
+}
+
+.minimal-single__content h2 {
+  font-size: 1.25rem;
+  margin: 2rem 0 0.75rem;
+}
+
+.minimal-single__content ul,
+.minimal-single__content ol {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.5rem;
+}
+
+/* Teaching - styles for content rendered in minimal-archive */
+.minimal-archive .teaching-section {
+  margin-bottom: 2.5rem;
+}
+
+.minimal-archive .teaching-section h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+.minimal-archive .supervision-item,
+.minimal-archive .teaching-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--minimal-border);
+}
+
+.minimal-archive .supervision-item:last-child,
+.minimal-archive .teaching-item:last-child {
+  border-bottom: none;
+}
+
+.minimal-archive .supervision-name,
+.minimal-archive .teaching-course {
+  color: var(--minimal-text);
+}
+
+.minimal-archive .supervision-details,
+.minimal-archive .teaching-details {
+  color: var(--minimal-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .minimal-nav__inner {
+    flex-wrap: wrap;
+  }
+
+  .minimal-nav__links {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .minimal-home__avatar-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .minimal-home__title {
+    font-size: 2.5rem;
+  }
+
+  .minimal-page__title {
+    font-size: 2.25rem;
+  }
+
+  .minimal-main {
+    padding: 5rem 1.25rem 3rem;
+  }
+}

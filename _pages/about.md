@@ -7,15 +7,14 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I am Mohanna.  <br>
+I am Mohanna,  <br>
+A final-year PhD candidate in *Conversational AI* at Radboud University, where I am co-advised by [Maarten de Rijke](https://staff.fnwi.uva.nl/m.derijke/), [Faegheh Hasibi](https://hasibi.com/), and [Arjen P. de Vries](https://www.ru.nl/personen/vries-a-de).
 
-I am a third-year PhD candidate in *Conversational AI* at Radboud University, where I am lucky to be co-advised by [Arjen P. de Vries](https://www.ru.nl/personen/vries-a-de), [Maarten de Rijke](https://staff.fnwi.uva.nl/m.derijke/), and [Faegheh Hasibi](https://hasibi.com/).
+My research focuses on adaptive orchestration and reasoning in non-monolithic information access systems; how we can move beyond rigid, one-size-fits-all architectures toward systems that dynamically self-organize their heterogeneous components (e.g., agents, tools, resources) to adapt to user needs, reliably reason over available information, and do more without brute-force scaling.
 
-At Radboud, my research sits at the intersection of language models, reasoning, and information access. My ultimate goal, I guess, is finding ways past brute-force scaling to systems that adapt, make sense of things, and do more with less.
+For my background, please see my [CV](http://mohannahoveyda.github.io/files/Mohanna_CV.pdf). For the details of my research, check the [publications](https://mohannahoveyda.com/publications/) page.
 
-For more about my journey so far, please see my [CV](http://mohannahoveyda.github.io/files/Mohanna_CV.pdf). For the research itself, check the [publications](https://mohannahoveyda.com/publications/) page.
-
-Research is more fun when it’s shared, so if you are thinking about the same topics, feel free to drop me an email :)
+In case you are curious/working on the same topics, feel free to drop me an email! 
 
 <!-- 
 A data-driven personal website
